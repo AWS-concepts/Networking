@@ -323,9 +323,9 @@ Activity-2:
 * While creating a vpc we get default route table .
 * create a ec2 using our vpc and one of the subnets.
 * And try to login into the ec2 (we can't login into the instance)
-* Create an internet gateway and attach it to the dedault route table.
-* Now try to access apache page. it show.
-* before it didn't because there is no internet access to theresoureces created within the network we created after attaching internet gateway to the route table then we get acsess to the internet. 
+* Create an internet gateway and attach it to the default route table.
+* Now login into the instance and install apache2.Now try to access apache page.
+* before it didn't login into the instance because there is no internet access to there soureces created within the network we created after attaching internet gateway to the route table then we get acsess to the internet. 
 
 Public and Private Subnets:
 ---------------------------
