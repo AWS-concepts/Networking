@@ -7,7 +7,7 @@ IP Address:
   * IPv6 --> 128 bits -->hexadecimal --> `x:x:x:x:x:x:x:x`
 * IPv4 is a 32 bit number organized into 4 octets (8 bits) addressed as x.x.x.x
 * Execute ipconfig in command prompt.
-![preview](networking88.png)
+![preview](images/networking88.png)
 * ip address = network id + host id
 ```
 ip: 192.168.0.118
@@ -81,81 +81,81 @@ n = 4
 N = 28
 SM: 11111111.11111111.11111111.11110000
      255.255.255.240
-```
+  ```
 * In this notation ip is expressed as x.x.x.x/N
-```
-192.168.0.0/24
-N (network id) = 24 bits
-n (host id) = 32 - 24 = 8
-ip: 192.168.0.x => 192.168.0.0 to 192.168.0.255
-SM: 11111111.11111111.11111111.00000000
+  ```
+    192.168.0.0/24
+    N (network id) = 24 bits
+    n (host id) = 32 - 24 = 8
+    ip: 192.168.0.x => 192.168.0.0 to 192.168.0.255
+    SM: 11111111.11111111.11111111.00000000
 
 
-10.0.0.0/16
-N = 16
-n = 32 -16 = 16
-ip: 10.0.x.x => 10.0.0.0 to 10.0.255.255
-SM: 11111111.11111111.00000000.00000000
+    10.0.0.0/16
+    N = 16
+    n = 32 -16 = 16
+    ip: 10.0.x.x => 10.0.0.0 to 10.0.255.255
+    SM: 11111111.11111111.00000000.00000000
 
-10.0.0.0/8
-N = 8
-n = 32-8 = 24
-ip: 10.x.x.x => 10.0.0.0 to 10.255.255.255
-SM: 11111111.00000000.00000000.00000000
-
-
-192.168.0.0/22
-N = 22
-n = 32-22 = 10
-
-ip: 192.168.(0+x).x => 192.168.(0+0).0 to 192.168.(0+3).255
-                    => 192.168.0.0 to 192.168.3.255
-SM: 11111111.11111111.11111100.00000000
-
-172.16.0.0/26
-N = 26
-n = 32-26 = 6
-
-ip: 172.16.0.(0+x) => 172.16.0.(0+0) to 172.16.0.(0+63)
-                => 172.16.0.0 to 172.16.0.63
-SM: 11111111.11111111.11111111.11000000
+    10.0.0.0/8
+    N = 8
+    n = 32-8 = 24
+    ip: 10.x.x.x => 10.0.0.0 to 10.255.255.255
+    SM: 11111111.00000000.00000000.00000000
 
 
-172.16.0.0/12
-N = 12
-n = 32-12 = 20
-ip: 172.(16+x).x.x => 172.(16+0).0.0 to 172.(16+15).255.255
-                => 172.16.0.0 to 172.31.255.255
-SM: 11111111.11110000.00000000.00000000
+    192.168.0.0/22
+    N = 22
+    n = 32-22 = 10
+
+    ip: 192.168.(0+x).x => 192.168.(0+0).0 to 192.168.(0+3).255
+                        => 192.168.0.0 to 192.168.3.255
+    SM: 11111111.11111111.11111100.00000000
+
+    172.16.0.0/26
+    N = 26
+    n = 32-26 = 6
+
+    ip: 172.16.0.(0+x) => 172.16.0.(0+0) to 172.16.0.(0+63)
+                    => 172.16.0.0 to 172.16.0.63
+    SM: 11111111.11111111.11111111.11000000
 
 
-192.168.64.0/22
-
-N = 22
-n = 10
-
-ip: 192.168.(64+x).x => 192.168.(64+0).0 to 192.168.(64+3).255
-                    => 192.168.64.0 to 192.168.67.255
-SM: 11111111.11111111.11111100.00000000
+    172.16.0.0/12
+    N = 12
+    n = 32-12 = 20
+    ip: 172.(16+x).x.x => 172.(16+0).0.0 to 172.(16+15).255.255
+                    => 172.16.0.0 to 172.31.255.255
+    SM: 11111111.11110000.00000000.00000000
 
 
-172.16.0.0/15
+    192.168.64.0/22
 
-N = 15
-n = 17
+    N = 22
+    n = 10
 
-ip:  172.(16+x).x.x => 172.16.0.0 to 172.17.255.255
-SM: 11111111.11111110.00000000.00000000
+    ip: 192.168.(64+x).x => 192.168.(64+0).0 to 192.168.(64+3).255
+                        => 192.168.64.0 to 192.168.67.255
+    SM: 11111111.11111111.11111100.00000000
 
 
-192.168.8.0/22
+    172.16.0.0/15
 
-N = 22
-n = 10
-  
-ip: 192.168.(8+x).0 to 192.168.8.0 to 192.168.11.255
-SM: 11111111.11111111.11111100.00000000
-```
+    N = 15
+    n = 17
+
+    ip:  172.(16+x).x.x => 172.16.0.0 to 172.17.255.255
+    SM: 11111111.11111110.00000000.00000000
+
+
+    192.168.8.0/22
+
+    N = 22
+    n = 10
+      
+    ip: 192.168.(8+x).0 to 192.168.8.0 to 192.168.11.255
+    SM: 11111111.11111111.11111100.00000000
+  ```
 ### Private vs Public Network
 * Private Network: Network which cannot be accesed directly from internet
 * Public Network: Network which can be accessed from internet
@@ -235,7 +235,7 @@ Security Group and Network ACL:
 -------------------------------
 * Security groups and Network ACLs can filter the network traffic.
 * Security group operates at network interface level(instance level), where as Network ACL operates at subnet level
-  ![preview](networking26.webp)
+  ![preview](images/networking26.webp)
 
 **Network ACL:**
   * when a vpc is create a default NACL will be created.
@@ -294,13 +294,13 @@ dest: 192.168.0.39
 ssh  Allowed
 ```
 * Lets create a NACL which allows all communication within vpc and all external communication to anywhere. Allows only 22 and 80 port from anywhere.
-![preview](networking27.png)
-![preview](networking28.png)
-![preview](networking29.png)
-![preview](networking30.png)
-![preview](networking31.png)
+![preview](images/networking27.png)
+![preview](images/networking28.png)
+![preview](images/networking29.png)
+![preview](images/networking30.png)
+![preview](images/networking31.png)
 * To add subnets association to NACL we need to explicitly associate.
-![preview](networking32.png)
+![preview](images/networking32.png)
 
 Activity-1:
 ----------
@@ -309,9 +309,9 @@ Activity-1:
     * within vpc on any traffic
     * external sources for only 22, 80, 443
 * Ensure db and app subnets allow incoming within vpc on any traffic no external communication is allowed.
-![preview](networking33.png)
-![preview](networking34.png)
-![preview](networking35.png)
+![preview](images/networking33.png)
+![preview](images/networking34.png)
+![preview](images/networking35.png)
 
 Security Groups:
 ----------------
@@ -322,7 +322,7 @@ Activity-2:
 * Created 1 VPC, 6 Subnets
 * While creating a vpc we get default route table .
 * create a ec2 using our vpc and one of the subnets.
-* And login into the ec2 and install apache2 and see the page.(it won't show the page).
+* And try to login into the ec2 (we can't login into the instance)
 * Create an internet gateway and attach it to the dedault route table.
 * Now try to access apache page. it show.
 * before it didn't because there is no internet access to theresoureces created within the network we created after attaching internet gateway to the route table then we get acsess to the internet. 
@@ -347,7 +347,7 @@ Activity-3:
 * Changed the file permissions `chmod 400 id_rsa id_rsa.pub`
 * Then login into public ec2 and try to login into private ec2 with private ip of private ec2.(getting Permission denied (publickey) )
 * Then tried to give command `ssh -i /home/ubuntu/id_rsa ubuntu@<privateip>`
-![preview](networking1.png)
+![preview](images/networking1.png)
 * Even we can login into private ec2 through public ec2 but we can't get access to the internet.
 * Private subnets unable access internet.
 
@@ -361,7 +361,7 @@ NAT Gateway:(Network Address Translation)
 * AWS provides NAT in two ways:
     * **NAT Instance:** It is a EC2 machine which you put in public subnet and then we configure router to forward   the packets but if NAT instance goes down your private subnets won't get internet access.
     * A NAT instance provides NAT. You can use a NAT instance to allow resources in a private subnet to communicate with destinations outside the virtual private cloud (VPC), such as the internet or an on-premises network. The resources in the private subnet can initiate outbound IPv4 traffic to the internet, but they can't receive inbound traffic initiated on the internet.
-    ![preview](networking2.png)
+    ![preview](images/networking2.png)
     * **NAT Gateway:** A NAT gateway is NAT service. You can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC but external services cannot initiate a connection with those instances.
 * NAT gateway requires an elastic ip and should be present in public subnet and router to the private subnets should have a route to the NAT
 
@@ -373,7 +373,7 @@ Activity-4:
 * While creating NAT gateway we should select public subnet and allocate elastic ip.
 * After creating NAT gateway we should edit route in private route table.
 * After that log into the private instance through public instance. and sudo apt update and try ping google.com we can see the result that private instance can access the internet same as our home network.
-![preview](networking3.png) 
+![preview](images/networking3.png) 
 
 VPC Peering
 -----------
@@ -381,24 +381,24 @@ VPC Peering
 * The destination network(vpc) should approve the peering request then in two VPCs peering connection objects will be created.
 * Rules for connecting are there should not be overlapping cidr ranges.
 * VPC Peering work flow.
-  ![preview](networking17.webp)
+  ![preview](images/networking17.webp)
 * We can ping instance by using there public ips by using internet but its not safe. So we have to ping each other instance with private ips because we need private based communication.
-  ![preview](networking4.png)
-  ![preview](networking5.png)
+  ![preview](images/networking4.png)
+  ![preview](images/networking5.png)
 * For that we are approaching VPC peering.
-  ![preview](networking6.png)
-  ![preview](networking7.png)
-  ![preview](networking8.png)
-  ![preview](networking9.png)
-  ![preview](networking10.png)
-  ![preview](networking11.png)
-  ![preview](networking12.png)
+  ![preview](images/networking6.png)
+  ![preview](images/networking7.png)
+  ![preview](images/networking8.png)
+  ![preview](images/networking9.png)
+  ![preview](images/networking10.png)
+  ![preview](images/networking11.png)
+  ![preview](images/networking12.png)
 * Now since there is infra to communicate, now modify route tables to forward packets to each other.
-  ![preview](networking15.png)
-  ![preview](networking16.png)
+  ![preview](images/networking15.png)
+  ![preview](images/networking16.png)
 * Now ping from one ec2 to other using private ip
-  ![preview](networking13.png)
-  ![preview](networking14.png)
+  ![preview](images/networking13.png)
+  ![preview](images/networking14.png)
 * Peering connection can work b/w only two networks not more than two.
 * If we have connection b/w A & B networks and connection b/w B & C that doesn't mean we have connection b/w A & C.
 
@@ -408,13 +408,13 @@ Site to Site VPN(Virtual Private Network):
 * There will be 2 VPN severs each in HQ and Branch office. there is an IP Secure Tunnel which transfers the packages which were logically encrypted b/w HQ nad Branch office. There will be encryption and decryption mechanism to secure the data.
 * VPN Gateway can establish gateway b/w only one VPC where as Trasit Gateway will help you to communicate b/w multiple VPCS in the same region.
 * Site to site VPN overview:
-  ![preview](networking18.webp)
+  ![preview](images/networking18.webp)
 * Site to site VPN in AWS:
-   ![preview](networking19.webp)
+   ![preview](images/networking19.webp)
 * Multiple VPCs in one region to on-prem:
-  ![preview](networking20.webp)
+  ![preview](images/networking20.webp)
 * Multiple VPCs to multiple datacenters on-prem:
-  ![preview](networking21.webp)
+  ![preview](images/networking21.webp)
 
 AWS VPC Endpoints:
 ------------------
@@ -425,12 +425,12 @@ AWS VPC Endpoints:
     2. Gateway Endpoints
 * If we want to access S3 or dynamo db from an instance within the private network(VPC) then we access it through internet then S3/Dynamo DB we exposed publicaly. To avoid that we use network interface which will have a private ip and we communicate s3/dynamo db by creating VPC interface endpoints.
 * **Interface Endpoints** will allow to communicate with AWS services using global network and gives an elastic network interface in subnet.
- ![preview](networking22.webp)
+ ![preview](images/networking22.webp)
 * An interface endpoint is a collection of one or more elastic network interfaces with a private IP address that serves as an entry point for traffic destined to a supported service.
 * **Gateway Endpoints** allows you to route the traffic to access a particular service using Gateway.
-  ![preview](networking23.png)
+  ![preview](images/networking23.png)
 * If you want a private conection for a custom service (email, temperature) then use private link.
-  ![preview](networking24.webp)
+  ![preview](images/networking24.webp)
 
 Enabling DNS Names in VPC
 --------------------------
@@ -438,31 +438,31 @@ Enabling DNS Names in VPC
 * Create a VPC with atleast one public subnet.
 * Create an ec2 instance in public subnet, ensure the security group rule is open for 22 and 80
 * By default in vpc the Public DNS Names are not enabled.
-  ![preview](networking36.png)
-  ![preview](networking38.png)
+  ![preview](images/networking36.png)
+  ![preview](images/networking38.png)
 * To enable public DNS names.
-  ![preview](networking37.png)
-  ![preview](networking39.png)
+  ![preview](images/networking37.png)
+  ![preview](images/networking39.png)
 
 ### DHCP Options Set
 * DHCP Options set is used to set the DNS Servers in VPC.
 * When a company wants to use thier own DNS rather than AWS provided DNS.
- ![preview](networking40.png)
- ![preview](networking41.png)
- ![preview](networking42.png)
+ ![preview](images/networking40.png)
+ ![preview](images/networking41.png)
+ ![preview](images/networking42.png)
 
 Activity-5:Create an ec2 instance with some predefined private ip.
 ------------------------------------------------------------------
 * Create a Network interface in the subnet (zone) where your ec2 instance is running.
 * Choose Custom for private ip address.
 * Attach this network interface to your ec2 instance.
-  ![preview](networking43.png)
-  ![preview](networking44.png)
-  ![preview](networking45.png)
-  ![preview](networking46.png)
-  ![preview](networking47.png)
-  ![preview](networking48.png)
-  ![preview](networking49.png)
+  ![preview](images/networking43.png)
+  ![preview](images/networking44.png)
+  ![preview](images/networking45.png)
+  ![preview](images/networking46.png)
+  ![preview](images/networking47.png)
+  ![preview](images/networking48.png)
+  ![preview](images/networking49.png)
 ### Lab Prep
 * Create an ec2 instance and ensure you execute the following steps.
 ```
@@ -473,21 +473,21 @@ sudo -i
 echo "<?php phpinfo(); ?>" > /var/www/html/info.php
 ```
 * Navigate to `http://publicip/info.php`.
-  ![preview](networking53.png)
+  ![preview](images/networking53.png)
 * Create an AMI.
-    ![preview](networking54.png)
-    ![preview](networking50.png)
-    ![preview](networking51.png)
-    ![preview](networking52.png)
+    ![preview](images/networking54.png)
+    ![preview](images/networking50.png)
+    ![preview](images/networking51.png)
+    ![preview](images/networking52.png)
 * After creating the AMI delete the EC2 Instance.
 ### Load balancing
 * Load balancing in cloud is dynamic in nature.
 
 #### OSI Model of Networking:
 * It has 7 layers.
-  ![preview](networking55.webp)
+  ![preview](images/networking55.webp)
 * Layers & Protocols
-  ![preview](networking56.png)
+  ![preview](images/networking56.png)
 
 #### Layer4 and Layer7 Loadbalancing
 * Load Balancing can be done at Layer 4 and Layer 7
@@ -509,22 +509,22 @@ echo "<?php phpinfo(); ?>" > /var/www/html/info.php
 * Create a VPC with 2 subnets in 2 different zones.
 * Create an EC2 intances in subnet1 and subnet2.
 * Ensure 22 and 80 ports are open for all.
-![preview](networking57.png)
-![preview](networking58.png)
-![preview](networking59.png)
-![preview](networking60.png)
-![preview](networking61.png)
-![preview](networking62.png)
-![preview](networking63.png)
-![preview](networking64.png)
-![preview](networking65.png)
-![preview](networking66.png)
-![preview](networking67.png)
-![preview](networking68.png)
-![preview](networking69.png)
-![preview](networking70.png)
-![preview](networking71.png)
-![preview](networking72.png)
+![preview](images/networking57.png)
+![preview](images/networking58.png)
+![preview](images/networking59.png)
+![preview](images/networking60.png)
+![preview](images/networking61.png)
+![preview](images/networking62.png)
+![preview](images/networking63.png)
+![preview](images/networking64.png)
+![preview](images/networking65.png)
+![preview](images/networking66.png)
+![preview](images/networking67.png)
+![preview](images/networking68.png)
+![preview](images/networking69.png)
+![preview](images/networking70.png)
+![preview](images/networking71.png)
+![preview](images/networking72.png)
 #### Layer 7 loadbalancing:
 * AWS has Application Load Balancer which can perform layer 7 load balancing.
 * login into web1 and execute the following
@@ -535,7 +535,7 @@ echo "<?php phpinfo(); ?>" > /var/www/html/info.php
   echo "<h1>images</h1>" > /var/www/html/images/index.html
   ```
 * access the application by using `http://publicip/images/index.html`
-![preview](networking74.png)
+![preview](images/networking74.png)
 * Login into web2 and execute the following.
   ```
   # web2
@@ -544,38 +544,38 @@ echo "<?php phpinfo(); ?>" > /var/www/html/info.php
   echo "<h1>music</h1>" > /var/www/html/music/index.html
   ```
 *  access the application by using `http://publicip/music/index.html`
-![preview](networking73.png)
+![preview](images/networking73.png)
 * http health checks:
    * Status Codes
-![preview](networking75.webp)
+![preview](images/networking75.webp)
   * Interval: how frequently load balancer will perform health checks?
   * Healthy threshold: How many consecutive health checks should be passed to consider the instance healthy
   * UnHeathy threshold: How many consecutive health checks should be failed to consider the instance unhealthy
 * Target Group for every application component running independently i.e. we will be creating two target groups images and music
 * Lets create a Application Load Balancer.
    * Create 2 target groups for 2 instances 1 for images and other for music.
-![preview](networking76.png) 
+![preview](images/networking76.png) 
    * After completion of creating select the default target group for loadbalancer.
    * Path Based Routing: [Refer Here](https://repost.aws/knowledge-center/elb-achieve-path-based-routing-alb)
    * Manage rules in listeners.
-![preview](networking77.png)
-![preview](networking78.png)
-![preview](networking79.png)
-![preview](networking80.png)
-![preview](networking81.png)
-![preview](networking82.png)
+![preview](images/networking77.png)
+![preview](images/networking78.png)
+![preview](images/networking79.png)
+![preview](images/networking80.png)
+![preview](images/networking81.png)
+![preview](images/networking82.png)
 * Similarly create other rule for images.
-![preview](networking83.png)
-![preview](networking84.png)
-![preview](networking85.png)
+![preview](images/networking83.png)
+![preview](images/networking84.png)
+![preview](images/networking85.png)
 
 #### Multiple regions
 * Copy AMI image from soeul to other region
 * Create same infrastructure in that region
 * Create two vpcs in two regions and ensure we have ec2 instances with some application running on http.
 * Create a Network/Application Load Balancer for each region.
-![preview](networking86.png)
-![preview](networking87.png)
+![preview](images/networking86.png)
+![preview](images/networking87.png)
 
 ### DNS (Domain Naming System):
 * DNS provides services which includes names to ip addresses (Domain names)
